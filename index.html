@@ -24,25 +24,30 @@
 			<!-- NAME -->
 			<div id="name" class="column">
 				<h4> <strong>John Moreland</strong></h4>
-				<h5 > Robotics + Mechanical Engineer </h5>
+				<h5 > Sustainability + Mechanical Engineering</h5>
 			</div>
 
 
 			<!-- SOCIAL ICONS -->
 			<div id="social" class="column">
-				<a target="_blank" href="http://www.linkedin.com/in/jmore" >
+				<!-- <a target="_blank" href="http://www.linkedin.com/in/jmore" >
 					<img src="./img/social/linkedin.svg" class="social-ico">
+				</a> -->
+				<a target="_blank" href="resume.pdf">
+					resume
 				</a>
+			</br>
 				<a target="_blank" href="mailto:jmoreland@outlook.com" >
-					<img src="./img/social/mail.svg" class="social-ico">
+					mail
+					<!-- <img src="./img/social/mail.svg" class="social-ico"> -->
 				</a>
-				<a target="_blank" href="https://twitter.com/john_moreland" >
+				<!-- <a target="_blank" href="https://twitter.com/john_moreland" >
 					<img src="./img/social/twitter.svg" class="social-ico">
-				</a>
+				</a> -->
 			</div>
 
 			<!-- NAVIGATION -->
-			<div id="nav" class="column">
+			<!-- <div id="nav" class="column">
 				<ul class=" menu vertical small-centered text-center navlist">
 					<li class="current"><a href='' >
 						<h4 id="navtext">projects</h4></a></li>
@@ -50,11 +55,11 @@
 					<li class=""><a target="_blank" href='resume.pdf'><h4 id="navtext">resume</h4></a></li>
 					<li class=""><a href='art.html'>				<h4 id="navtext">art</h4></a></li>
 				</ul>
-			</div>
+			</div> -->
 
 			<!-- PHOTO -->
-			<div class="column small-hidden">
-			</div>
+			<!-- <div class="column small-hidden">
+			</div> -->
 
 
 		</div>
@@ -73,10 +78,154 @@
 		<div class="row small-up-2 medium-up-4" data-equalizer data-equalize-by-row="true">
 
 <!-- PROJECT TO ADD:
-	ADE cassava grater
-	Penny progress
-	Anodizing
+
 -->
+
+
+		<!-- Cassava Grater -->
+		<div class="column" data-equalizer-watch>
+			<a data-open="gratermodal">
+				<div class="card">
+					<img src="./img/projects/thumbnails/ade.jpg">
+					<div class="card-section">
+						<h5 class="text-center project-title">affordable design</h5>
+					</div>
+				</div>
+			</a>
+			<div class="large reveal" id="gratermodal" data-reveal>
+				<h2 class="text-center" style="font-variant:small-caps">affordable design</h2>
+				<div class="row small-up-1 medium-up-2">
+
+					<!-- description -->
+					<div class="column">
+						<h5 class="text-left">
+							Starting with a capstone class in Affordable Design, I have been working with QueenTech - a Ghanaian non-profit focused on equipping women in rural communities. QueenTech builds accessible, small-scale agricultural machines for women who process cassava into gari (a staple Ghanaian and West African dish). This project has grown over many years - a number of employees and a rotating group of students have contributed to the venture.
+							</br>	My personal responsibilities included:
+							<ul>
+									<li> Acting as Technical Lead to oversee machine architecture changes to improve machine operation, increase reliability, reduce part count and cost
+									<li> Traveling to Ghana to build prototypes, meet operators, and repair machines in the field
+									<li> Running analysis (hand calcs, and FEA) on machine loading conditions to ensure performance
+									<li> Coordinating with overseas suppliers to manufacture custom AC induction motors
+							</ul>
+						</h5>
+					</div>
+
+					<!-- images -->
+					<div class="column">
+						<img src="./img/projects/ade/gratertopisorunning.jpg">
+					</div>
+
+					<div class="column show-for-medium">
+
+						</br>
+						<img src="./img/projects/ade/gari.jpeg">
+					</div>
+
+					<div class="column show-for-medium">
+
+						</br>
+						<img src="./img/projects/ade/grateriso.jpeg">
+					</div>
+
+				</div>
+				<button class="close-button" data-close aria-label="Close modal" type="button">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+
+		<!-- FEA -->
+		<div class="column" data-equalizer-watch>
+			<a data-open="feamodal">
+				<div class="card">
+					<img src="./img/projects/thumbnails/fea.jpeg">
+					<div class="card-section">
+						<h5 class="text-center project-title">stamping optimization</h5>
+					</div>
+				</div>
+			</a>
+			<div class="large reveal" id="feamodal" data-reveal>
+				<h2 class="text-center" style="font-variant:small-caps">stamping optimization</h2>
+				<div class="row small-up-1 medium-up-2">
+
+					<!-- description -->
+					<div class="column">
+						<h5 class="text-left">
+							There is one sheet metal component on the Affordable Cassava Grater that requires custom forming. The depth of the drawn feature greatly increases the machine’s performance, but our team had limited access to a large press. After proving that we could adjust tool geometry to greatly decrease the tonnage required, we decided to run an optimization study in Ansys.
+						</br> </br>		We aimed to maximize draw depth while staying below a designated tonnage (press capacity). I built a parametric model to vary the sheet metal thickness, punch clearances, and overall punch geometry (fillet radius, circularity). I made sure to use a bilinear material model to capture the plastic deformation. Then, I set up to record the reaction force after prescribing different displacements on the punch.
+						</br>	</br> 	Unfortunately this setup required a fair amount of debugging. I was only able to converge the simulation after simplifying the model, chasing newton-raphson residuals, endlessly refining the mesh, and adjusting the initialization load steps. While I was able to validate our experimental data, further mesh refinements and time stepping adjustments were required to bring the overall computation time down before attempting to run it parametrically.
+						</h5>
+						</div>
+
+					<!-- images -->
+					<div class="column">
+						<img src="./img/projects/fea/chutebump.jpg">
+					</div>
+
+					<div class="column show-for-medium">
+
+						</br>
+						<img src="./img/projects/fea/deformation.PNG">
+					</div>
+
+					<div class="column show-for-medium">
+
+						</br>
+						<img src="./img/projects/fea/rxnforce.PNG">
+					</div>
+
+				</div>
+				<button class="close-button" data-close aria-label="Close modal" type="button">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+
+		<!-- Anodizing -->
+		<div class="column" data-equalizer-watch>
+			<a data-open="anomodal">
+				<div class="card">
+					<img src="./img/projects/thumbnails/anogreen.JPG">
+					<div class="card-section">
+						<h5 class="text-center project-title">anodizing</h5>
+					</div>
+				</div>
+			</a>
+			<div class="large reveal" id="anomodal" data-reveal>
+				<h2 class="text-center" style="font-variant:small-caps">ANODIZING</h2>
+				<div class="row small-up-1 medium-up-2">
+
+					<!-- description -->
+					<div class="column">
+						<h5 class="text-left">
+						For a Material Science project, my group ran small batch anodizing at Olin. We investigated various processes in literature but found a wide range of recommended operating parameters. We decided to experimentally study the effect of varying current density (among other operating parameters). We then observed the thickness and uniformity of the anodic layer under a Scanning Electron Microscope. We also experimented with adding dyes to the process, and compared our results against an iPhone 6 chassis.
+						</h5>
+						</div>
+
+					<!-- images -->
+					<div class="column">
+						<img src="./img/projects/ano/anotrial.JPG">
+					</div>
+
+					<div class="column show-for-medium">
+
+						</br>
+						<img src="./img/projects/ano/ourano.png">
+					</div>
+
+					<div class="column show-for-medium">
+
+						</br>
+						<img src="./img/projects/ano/anogreen.JPG">
+					</div>
+
+				</div>
+				<button class="close-button" data-close aria-label="Close modal" type="button">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+
 
 
 
@@ -214,7 +363,7 @@
 			</div>
 
 			<!-- BOATS BOATS BOATS -->
-			<div class="column" data-equalizer-watch>
+			<!-- <div class="column" data-equalizer-watch>
 				<a data-open="kayakmodal">
 					<div class="card">
 						<img src="./img/projects/thumbnails/kayak.png">
@@ -225,10 +374,10 @@
 				</a>
 				<div class="large reveal" id="kayakmodal" data-reveal>
 					<h2 class="text-center" style="font-variant:small-caps">folding kayaks</h2>
-					<div class="row small-up-1 medium-up-2">
+					<div class="row small-up-1 medium-up-2"> -->
 
 						<!-- description -->
-						<div class="column">
+						<!-- <div class="column">
 							<h5 class="text-justify">Can you build a kayak with $50? <strong>Yes.</strong>
 							</br>
 								<a href="https://www.youtube.com/watch?v=caBSze3Im6c">our inspiration</a> </br></h5>
@@ -244,10 +393,10 @@
 								<li>You’ll need to find your own paddles</li>
 							</ul>
 							</h6>
-						</div>
+						</div> -->
 
 						<!-- images -->
-						<div class="column">
+						<!-- <div class="column">
 							<img src="./img/projects/kayak/floatin.jpg">
 						</div>
 
@@ -268,10 +417,10 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- PLAY PROJECT -->
-			<div class="column" data-equalizer-watch>
+			<!-- <div class="column" data-equalizer-watch>
 				<a data-open="playprojectmodal">
 					<div class="card">
 					  <img src="./img/projects/thumbnails/playproject.png">
@@ -282,10 +431,10 @@
 				</a>
 				<div class="large reveal" id="playprojectmodal" data-reveal>
 					<h2 class="text-center" style="font-variant:small-caps">play project</h2>
-					<div class="row small-up-1 medium-up-2">
+					<div class="row small-up-1 medium-up-2"> -->
 
 						<!-- description -->
-						<div class="column">
+						<!-- <div class="column">
 							<h5 class="text-justify">My team of 5 was tasked with creating a turtle-themed play experience for
 							fourth graders. After interviewing younger nephews and cousins, we learned
 							that our game should be both cooperative and competitive, while also
@@ -299,10 +448,10 @@
 								out of triple wall cardboard, fabric, and packing peanuts. We then
 								brought in several classes of fourth graders to play test our game.
 								Overall, it was a great experience for everyone involved.</h5>
-							</div>
+							</div> -->
 
 						<!-- images -->
-						<div class="column">
+						<!-- <div class="column">
 							<img src="./img/projects/playproject/kids.png">
 						</div>
 
@@ -311,10 +460,10 @@
 						</div>
 					</div>
 
-					<br>
+					<br> -->
 
 					<!-- extra images -->
-					<div class="row small-up-2 medium-up-4 show-for-large">
+					<!-- <div class="row small-up-2 medium-up-4 show-for-large">
 						<div class="column">
 							<img src="./img/projects/playproject/crouch.JPG">
 						</div>
@@ -333,7 +482,7 @@
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-			</div>
+			</div> -->
 
 			<!-- DOT -->
 			<div class="column" data-equalizer-watch>
